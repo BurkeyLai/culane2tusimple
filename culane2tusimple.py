@@ -9,8 +9,9 @@ import glob
 from os import listdir
 from os.path import isfile, join
 
+h_sample = np.arange(200, 600, 10)
 data_dir = ['driver_161_90frame', 'driver_182_30frame', 'driver_23_30frame']
-
+h_sample = np.arange(200, 600, 10)
 data_dir = ['driver_23_30frame']
 for d in data_dir:
     all_dir = listdir(d)
@@ -62,7 +63,7 @@ for d in data_dir:
                         if len(l) == len(h_sample):
                             final_lane_lines.append(l)
 
-                ### ÊéíÂ∫è bubble sort
+                ### ?íÂ? bubble sort
                 for l in final_lane_lines:
                     for p in range(len(l) - 1):
                         for pp in range(len(l) - 1 - p):
